@@ -4,9 +4,9 @@ toggleButton.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
 });
 
-// === Page Navigation ===
+// === Navigation ===
 const navLinks = document.querySelectorAll('nav a');
-const sections = document.querySelectorAll('main section');
+const sections = document.querySelectorAll('section');
 navLinks.forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
@@ -20,7 +20,6 @@ navLinks.forEach(link => {
 const music = document.getElementById('background-music');
 const playBtn = document.getElementById('play-pause');
 let isPlaying = false;
-
 playBtn.addEventListener('click', () => {
   if (!isPlaying) {
     music.play();
@@ -45,10 +44,10 @@ function typeEffect() {
 }
 typeEffect();
 
-// === Form ===
+// === Contact Form ===
 const form = document.getElementById('contact-form');
 form.addEventListener('submit', e => {
   e.preventDefault();
-  alert('Pesan berhasil dikirim! Terima kasih.');
+  alert('Pesan berhasil dikirim!');
   form.reset();
 });
